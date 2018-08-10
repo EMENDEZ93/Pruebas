@@ -1,11 +1,9 @@
 package org.gradle;
 
 import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
-
-import junit.framework.Assert;
 
 public class TallerTest {
 
@@ -484,5 +482,233 @@ public class TallerTest {
 		// assert
 		assertEquals(7, resultado);		
 	}	
+
+	
+	@Test
+	public void rojoYnaranjaIgualPascua() {
+	
+		//arrange
+		String cadena1 = "Rojo";
+		String cadena2 = "Naranja";
+		
+		// act
+		String resultado = taller.returnPascua(cadena1, cadena2);
+
+		// assert
+		assertEquals("Pascua", resultado);		
+		
+	}
+	
+	
+	@Test
+	public void ochoYDiezOcho() {
+		
+		//arrange
+		int valor1 = 8;
+		int valor2 = 18;
+		
+		//act
+		boolean resultado = taller.moduloDosNumerosEnY(valor1, valor2);
+		
+		//assert
+		assertEquals(true, resultado);
+		
+	}
+
+	
+	@Test
+	public void treYCientoTrece() {
+		
+		//arrange
+		int valor1 = 3;
+		int valor2 = 113;
+		
+		//act
+		boolean resultado = taller.moduloDosNumerosEnY(valor1, valor2);
+		
+		//assert
+		assertEquals(true, resultado);
+		
+	}	
+
+	
+	@Test
+	public void seisYCientoDiezSiete() {
+		
+		//arrange
+		int valor1 = 6;
+		int valor2 = 117;
+		
+		//act
+		boolean resultado = taller.moduloDosNumerosEnY(valor1, valor2);
+		
+		//assert
+		assertEquals(false, resultado);
+		
+	}	
+	
+	
+	@Test
+	public void mayorTreinta() {
+		
+		//arrange
+		int valor1 = 8;
+		int valor2 = 18;
+		int valor3 = 30;
+		
+		//act
+		int resultado = taller.mayorDeLosValores(valor1, valor2, valor3);
+		
+		//assert
+		assertEquals(30, resultado);		
+		
+	}
+
+	
+	@Test
+	public void mayorVentiNueve() {
+		
+		//arrange
+		int valor1 = 29;
+		int valor2 = 5;
+		int valor3 = 15;
+		
+		//act
+		int resultado = taller.mayorDeLosValores(valor1, valor2, valor3);
+		
+		//assert
+		assertEquals(29, resultado);		
+		
+	}	
+
+	@Test
+	public void mayorCincuenta() {
+		
+		//arrange
+		int valor1 = 10;
+		int valor2 = 50;
+		int valor3 = 1;
+		
+		//act
+		int resultado = taller.mayorDeLosValores(valor1, valor2, valor3);
+		
+		//assert
+		assertEquals(50, resultado);		
+		
+	}	
+
+	
+	@Test
+	public void sieteySieteAprueba() {
+		
+		//arrange
+		int bimestre1 = 7;
+		int bimestre2 = 7;
+		
+		//act
+		String resultado = taller.elEstudianteAprobo(bimestre1, bimestre2);
+		
+		//assert
+		assertEquals("Aprueba", resultado);		
+		
+	}	
+
+	@Test
+	public void cuatroySeisSupletorio() {
+		
+		//arrange
+		int bimestre1 = 4;
+		int bimestre2 = 6;
+		
+		//act
+		String resultado = taller.elEstudianteAprobo(bimestre1, bimestre2);
+		
+		//assert
+		assertEquals("Supletorio", resultado);		
+		
+	}	
+
+	@Test
+	public void cincoyCuatroSupletorio() {
+		
+		//arrange
+		int bimestre1 = 5;
+		int bimestre2 = 4;
+		
+		//act
+		String resultado = taller.elEstudianteAprobo(bimestre1, bimestre2);
+		
+		//assert
+		assertEquals("Reprueba", resultado);		
+		
+	}	
+	
+	
+	@Test
+	public void dosSumatorioDosigualCuatro() {
+		
+		//arrange
+		int valor1 = 2;
+		int valor2 = 2;
+		
+		//act
+		int resultado = taller.sumatoria(valor1, valor2);
+		
+		//assert
+		assertEquals(4, resultado);		
+		
+	}	
+
+	@Test
+	public void treSumatorioCuatroigualDoce() {
+		
+		//arrange
+		int valor1 = 3;
+		int valor2 = 4;
+		
+		//act
+		int resultado = taller.sumatoria(valor1, valor2);
+		
+		//assert
+		assertEquals(12, resultado);		
+		
+	}	
+	
+	@Test
+	public void cincoSumatorioCincoigualVentiCinco() {
+		
+		//arrange
+		int valor1 = 5;
+		int valor2 = 5;
+		
+		//act
+		int resultado = taller.sumatoria(valor1, valor2);
+		
+		//assert
+		assertEquals(25, resultado);		
+		
+	}
+	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
