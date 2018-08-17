@@ -2,6 +2,8 @@ package org.gradle;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -689,6 +691,145 @@ public class TallerTest {
 		
 	}
 	
+	@Test
+	public void dosExponenteDosigualCuatro() {
+		
+		//arrange
+		int base = 2;
+		int exponente_ = 2 ;
+		
+		//act
+		int resultado = taller.exponente(base, exponente_);
+		
+		//assert
+		assertEquals(4, resultado);		
+		
+	}
+
+	
+	@Test
+	public void tresExponenteDosigualNueve() {
+		
+		//arrange
+		int base = 3;
+		int exponente_ = 2 ;
+		
+		//act
+		int resultado = taller.exponente(base, exponente_);
+		
+		//assert
+		assertEquals(9, resultado);		
+		
+	}	
+
+	
+	@Test
+	public void seisExponenteDosigualTreintaYSeis() {
+		
+		//arrange
+		int base = 6;
+		int exponente_ = 2 ;
+		
+		//act
+		int resultado = taller.exponente(base, exponente_);
+		
+		//assert
+		assertEquals(36, resultado);		
+		
+	}		
+	
+	
+	@Test
+	public void array5381mayor8() {
+		
+		//arrange
+		int[] base = {5,3,8,1};
+		
+		//act
+		int resultado = taller.mayorEnArray(base);
+		
+		//assert
+		assertEquals(8, resultado);		
+		
+	}	
+
+	
+	@Test
+	public void array2321mayor3() {
+		
+		//arrange
+		int[] base = {2,3,2,1};
+		
+		//act
+		int resultado = taller.mayorEnArray(base);
+		
+		//assert
+		assertEquals(3, resultado);		
+		
+	}
+
+	
+	@Test
+	public void array15_4_14_menosCincomayor15() {
+		
+		//arrange
+		int[] base = {15,4,14,-5};
+		
+		//act
+		int resultado = taller.mayorEnArray(base);
+		
+		//assert
+		assertEquals(15, resultado);		
+		
+	}
+
+	
+	
+	@Test
+	public void arrayA6_3_ArrayB9_1_SumaMayorArrayB() {
+		
+		//arrange
+		int[] arrayA = {6,3};
+		int[] arrayB = {9,1};
+		
+		//act
+		int[] resultado = taller.ArrayMayor(arrayA, arrayB);
+		
+		//assert
+		Assert.assertArrayEquals(arrayB, resultado);
+		
+	}	
+	
+
+	@Test
+	public void arrayA2_3ArrayB2_6SumaMayorArrayB() {
+		
+		//arrange
+		int[] arrayA = {2,3};
+		int[] arrayB = {2,6};
+		
+		//act
+		int[] resultado = taller.ArrayMayor(arrayA, arrayB);
+		
+		//assert
+		Assert.assertArrayEquals(arrayB, resultado);
+		
+	}		
+
+	@Test
+	public void arrayA6_4ArrayB1_6SumaMayorArrayA() {
+		
+		//arrange
+		int[] arrayA = {6,4};
+		int[] arrayB = {1,6};
+		
+		//act
+		int[] resultado = taller.ArrayMayor(arrayA, arrayB);
+		
+		//assert
+		Assert.assertArrayEquals(arrayA, resultado);
+		
+	}			
 	
 }
 

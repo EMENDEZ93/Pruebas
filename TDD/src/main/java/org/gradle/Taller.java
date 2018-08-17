@@ -1,5 +1,7 @@
 package org.gradle;
 
+import java.util.Arrays;
+
 public class Taller {
 
 	public int sumar(int numero1, int numero2) {
@@ -71,13 +73,13 @@ public class Taller {
 	public String elEstudianteAprobo(int bimestre1, int bimestre2) {
 		String resultado = "";
 		
-		if(bimestre1 + bimestre2 >= 14) {
+		/*if(bimestre1 + bimestre2 >= 14) {
 			resultado = "Aprueba";
 		} else if (bimestre1 + bimestre2 <= 13 && bimestre1 + bimestre2 >= 10 ) {
 			resultado = "Supletorio";
 		} else if (bimestre1 + bimestre2 < 10 ) {
 			resultado = "Reprueba";
-		}
+		}*/
 		
 		//return resultado; 
 		return (bimestre1 + bimestre2 >= 14)?"Aprueba"
@@ -93,6 +95,24 @@ public class Taller {
 		}
 		
 		return pivot;
+	}
+
+	public int exponente(int base, int exponente_) {
+		int resultado = 0;
+		
+		for(int i = 0; i < exponente_; i++) {
+			resultado = sumatoria(base, base);
+		}
+		
+		return resultado;
+	}
+
+	public int mayorEnArray(int[] base) {
+		return Arrays.stream(base).max().getAsInt();
+	}
+
+	public int[] ArrayMayor(int[] arrayA, int[] arrayB) {
+		return (Arrays.stream(arrayA).sum() > Arrays.stream(arrayB).sum())?arrayA:arrayB ;
 	}
 
 	
