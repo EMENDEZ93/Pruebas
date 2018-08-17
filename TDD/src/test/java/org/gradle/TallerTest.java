@@ -830,6 +830,22 @@ public class TallerTest {
 		Assert.assertArrayEquals(arrayA, resultado);
 		
 	}			
+
+	@Test
+	public void fillArray1Size() {
+		
+		//arrange
+		int fillArray = 1;
+		int[] arrayA;
+		
+		//act
+		int[] resultado = taller.fileArray(fillArray, arrayA);
+		
+		//assert
+		Assert.assertArrayEquals(arrayA, resultado);
+		
+	}	
+	
 	
 }
 

@@ -33,7 +33,7 @@ public class Taller {
 	}
 
 	public boolean getNumeroPorBoolean(int numero) {
-		return (numero == 5) ? true : false;
+		return (numero == 5);
 	}
 
 	public boolean esNumeroEsPositivo(int numero) {
@@ -113,6 +113,17 @@ public class Taller {
 
 	public int[] ArrayMayor(int[] arrayA, int[] arrayB) {
 		return (Arrays.stream(arrayA).sum() > Arrays.stream(arrayB).sum())?arrayA:arrayB ;
+	}
+
+	public int[] fileArray(int fillArray) {
+		int pivot = 0;
+		
+		int[] result = new int[fillArray];
+		while (pivot == fillArray ) {
+			pivot++;
+		}
+		
+		return result;
 	}
 
 	
