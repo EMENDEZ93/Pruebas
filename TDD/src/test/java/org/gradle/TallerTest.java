@@ -830,22 +830,66 @@ public class TallerTest {
 		Assert.assertArrayEquals(arrayA, resultado);
 		
 	}			
-
+	
+	
+	
 	@Test
-	public void fillArray1Size() {
+	public void factorialTresIgualSeis() {
 		
 		//arrange
-		int fillArray = 1;
-		int[] arrayA;
+		int a = 3;
 		
 		//act
-		int[] resultado = taller.fileArray(fillArray, arrayA);
+		int resultado = taller.factorial(a);
+		
 		
 		//assert
-		Assert.assertArrayEquals(arrayA, resultado);
+		assertEquals(6, resultado);
+	}
+
+	
+	@Test
+	public void factorialDosIgualDos() {
 		
+		//arrange
+		int a = 2;
+		
+		//act
+		int resultado = taller.factorial(a);
+		
+		
+		//assert
+		assertEquals(2, resultado);
 	}	
 	
+	@Test
+	public void factorialUnoIgualUno() {
+		
+		//arrange
+		int a = 1;
+		
+		//act
+		int resultado = taller.factorial(a);
+		
+		
+		//assert
+		assertEquals(1, resultado);
+	}	
+	
+	
+	
+	@Test
+	public void dosIgualCinco() {
+		//assert
+		int a = 2;
+		
+		//act
+		int resultado = taller.parOImpar(2);
+		
+		//assert
+		assertEquals(5, resultado);
+		
+	}
 	
 }
 

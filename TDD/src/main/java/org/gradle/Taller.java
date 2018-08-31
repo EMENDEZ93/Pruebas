@@ -126,5 +126,32 @@ public class Taller {
 		return result;
 	}
 
+	public int factorial(int a) {
+		
+		int resultado = 1;
+		
+		for(int i= 1 ; i <= a; i++) {
+			resultado *=i;
+		}
+		return resultado;
+
+	}
+
+	public int parOImpar(int i) {
+		
+		if(i == 0) {
+			return 0;
+		}else if(elNumeroEsPar(i)) {
+			return 3 + parOImpar(i-1); 
+		} else if(!elNumeroEsPar(i)) {
+			return 2 + parOImpar(i-1);
+		}
+		
+		return 0;
+	}
+
+	
+	
+	
 	
 }
