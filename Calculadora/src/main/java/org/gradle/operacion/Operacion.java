@@ -1,5 +1,7 @@
 package org.gradle.operacion;
 
+import java.util.Random;
+
 public class Operacion {
 
 	public int sumar(int a, int b) {
@@ -40,5 +42,11 @@ public class Operacion {
 		return resultado;
 
 	}	
+	
+	
+	public int generateRandomNumber() {
+		Random number = new Random();
+		return number.nextInt(10)+1;
+	}
 	
 }

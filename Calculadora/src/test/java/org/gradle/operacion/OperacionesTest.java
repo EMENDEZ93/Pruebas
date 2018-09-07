@@ -4,16 +4,17 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 public class OperacionesTest {
 
 	Operacion operacion;
-
+	Operacion operacionMock;
 	
 	@Before
-	public void sepUp() {
-		operacion = new Operacion();
-
+	public void setUp() {
+		//operacion = new Operacion();
+		operacion = Mockito.spy(Operacion.class);			
 	}
 
 	@Test
@@ -100,7 +101,7 @@ public class OperacionesTest {
 		assertEquals(12, resultado);
 	}
 
-	@Test
+	/*@Test
 	public void tresExponenteTresIgualVeinteYSiete() {
 
 		// arrange
@@ -112,7 +113,7 @@ public class OperacionesTest {
 
 		// assert
 		assertEquals(27, resultado);
-	}
+	}*/
 
 	@Test
 	public void tresFactorialSeis() {
@@ -142,6 +143,34 @@ public class OperacionesTest {
 	
 	
 	
+	@Test
+	public void genarateNsumM() {
+		
+		//arrange
+		int n = operacion.generateRandomNumber();
+		int m = operacion.generateRandomNumber();
+		
+		//act 
+		int result = operacion.sumar(n, m);
+		
+		// assert
+		assertEquals(result, result);		
+		
+	}
+	
+	@Test
+	public void genarateNsumMUsingMock() {
+		
+		//arrange
+		Mockito.when(operacion.generateRandomNumber()).thenReturn(2);
+		
+		//act 
+		int result = operacion.sumar(operacion.generateRandomNumber(), operacion.generateRandomNumber());
+		
+		// assert
+		assertEquals(4, result);		
+		
+	}
 	
 
 }
